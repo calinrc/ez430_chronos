@@ -363,14 +363,14 @@ void display_time(u8 line, u8 update)
                 switch (sTime.drawFlag)
                 {
                     case 3:
-                        if (sys.flag.use_metric_units)
-                        {
-                            // Display 24H time "HH"
-                            display_chars(switch_seg(line, LCD_SEG_L1_3_2,
-                                                     LCD_SEG_L2_3_2), int_to_array(sTime.hour, 2,
-                                                                                   0), SEG_ON);
-                        }
-                        else
+//                        if (sys.flag.use_metric_units)
+//                        {
+//                            // Display 24H time "HH"
+//                            display_chars(switch_seg(line, LCD_SEG_L1_3_2,
+//                                                     LCD_SEG_L2_3_2), int_to_array(sTime.hour, 2,
+//                                                                                   0), SEG_ON);
+//                        }
+//                        else
                         {
                             // Display 12H time "HH" + AM/PM
                             hour12 = convert_hour_to_12H_format(sTime.hour);
@@ -400,13 +400,13 @@ void display_time(u8 line, u8 update)
         if (sTime.line1ViewStyle == DISPLAY_DEFAULT_VIEW)
         {
             // Display 24H/12H time
-            if (sys.flag.use_metric_units)
-            {
-                // Display 24H time "HH"
-                display_chars(switch_seg(line, LCD_SEG_L1_3_2,
-                                         LCD_SEG_L2_3_2), int_to_array(sTime.hour, 2, 0), SEG_ON);
-            }
-            else
+//            if (sys.flag.use_metric_units)
+//            {
+//                // Display 24H time "HH"
+//                display_chars(switch_seg(line, LCD_SEG_L1_3_2,
+//                                         LCD_SEG_L2_3_2), int_to_array(sTime.hour, 2, 0), SEG_ON);
+//            }
+//            else
             {
                 // Display 12H time "HH" + AM/PM information
                 hour12 = convert_hour_to_12H_format(sTime.hour);

@@ -238,13 +238,13 @@ void display_alarm(u8 line, u8 update)
 
     if (update == DISPLAY_LINE_UPDATE_FULL)
     {
-        if (sys.flag.use_metric_units)
-        {
-            // Display 24H alarm time "HH:MM"
-            display_chars(switch_seg(line, LCD_SEG_L1_3_2,
-                                     LCD_SEG_L2_3_2), int_to_array(sAlarm.hour, 2, 0), SEG_ON);
-        }
-        else
+//        if (sys.flag.use_metric_units)
+//        {
+//            // Display 24H alarm time "HH:MM"
+//            display_chars(switch_seg(line, LCD_SEG_L1_3_2,
+//                                     LCD_SEG_L2_3_2), int_to_array(sAlarm.hour, 2, 0), SEG_ON);
+//        }
+//        else
         {
             // Display 12H alarm time "HH:MM" + AM/PM
             hour12 = convert_hour_to_12H_format(sAlarm.hour);
